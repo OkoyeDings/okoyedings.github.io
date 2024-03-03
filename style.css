@@ -46,9 +46,14 @@ body{
 }
 
 .logo{
+    position: relative;
     font-size: 2.5rem;
     color: var(--text-color);
     font-weight: 600;
+}
+
+.navbar{
+    position: relative;
 }
 
 .navbar a{
@@ -64,6 +69,7 @@ body{
 }
 
 #menu-icon{
+    position: relative;
     font-size: 3.6rem;
     color: var(--text-color);
     cursor: pointer;
@@ -92,6 +98,8 @@ section{
 }
 
 .home-content h1{
+    position: relative;
+    display: inline-block;
     font-size: 5.6rem;
     font-weight: 700;
     line-height: 1.3;
@@ -112,9 +120,36 @@ section{
     color: transparent;
     -webkit-text-stroke: .7px var(--main-color);
     line-height: 1.5;
+    background-image: linear-gradient(var(--main-color),var(--main-color));
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -33rem 0;
+
+}
+
+.home.show-animate .home-content .text-animate h3{
+    animation: homeBgText 6s linear infinite;
+    animation-delay: 2s;
+}
+
+.home-content .text-animate h3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-right: 2px solid var(--main-color);
+    z-index: -1;
+}
+
+.home.show-animate .home-content .text-animate h3::before{
+    animation: homeCursorText 6s linear infinite;
+    animation-delay: 2s;
 }
 
 .home-content p{
+    position: relative;
     font-size: 1.6rem;
     margin: 2rem 0 4rem;
 }
@@ -236,6 +271,7 @@ section{
 }
 
 .heading{
+    position: relative;
     font-size: 5rem;
     margin-bottom: 3rem;
     text-align: center;
@@ -274,6 +310,7 @@ span{
     border-bottom: var(--second-bg-color) .2rem solid;
     border-left: var(--main-color) .2rem solid;
     border-right: var(--main-color) .2rem solid;
+    animation: aboutSpinner 8s linear infinite;
 }
 
 .about-content{
@@ -281,15 +318,19 @@ span{
 }
 
 .about-content h3{
+    position: relative;
+    display: inline-block;
     font-size: 2.6rem;
 }
 
 .about-content p{
+    position: relative;
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
 
 .btn-box.btns{
+    position: relative;
     display: inline-block;
     width: 15rem;
 }
@@ -319,11 +360,14 @@ span{
 }
 
 .education-column .title{
+    position: relative;
+    display: inline-block;
     font-size: 2.5rem;
     margin: 0 0 1.5rem 2rem;
 }
 
 .education-column .education-box{
+    position: relative;
     border-left: .2rem solid var(--main-color);
 }
 
@@ -389,12 +433,18 @@ span{
 }
 
 .skills{
-    min-height: auto;
+    min-height: 100vh;
     padding-bottom: 7rem;
     background-color: var(--second-bg-color);
     justify-content: center;
     align-items: center;
     overflow: hidden;
+}
+
+.skills h2,.contact h2{
+    display:inline-block ;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .skills .skills-row{
@@ -409,8 +459,14 @@ span{
 }
 
 .skills-column .title{
+    position: relative;
+    display: inline-block;
     font-size: 2.5rem;
     margin: 0 0 1.5rem;
+}
+
+.skills-column .skills-box{
+    position: relative;
 }
 
 .skills-box .skills-content{
@@ -505,6 +561,7 @@ span{
 }
 
 .contact form{
+    position: relative;
     max-width: 70rem;
     margin: 0 auto;
     text-align: center;
@@ -582,6 +639,10 @@ span{
     background: var(--second-bg-color);
 }
 
+.footer-text,.footer-icontop{
+    position: relative;
+}
+
 .footer-text{
     font-size: 1.6rem;
 }
@@ -623,6 +684,46 @@ span{
 
 .footer-icontop a:hover i{
     color: var(--main-color);
+}
+
+.animate{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: 98;
+}
+
+section:nth-child(odd) .animate.scroll,
+.footer .animate.scroll{
+    background-color: var(--second-bg-color);
+}
+
+.logo .animate, .navbar .animate, #menu-icon .animate, .home.show-animate .animate{
+    animation: showRight 1s ease forwards;
+    animation-delay: calc(.3s * var(--i));
+}
+
+.animate.scroll{
+    transition: 1s ease;
+    animation-delay: calc(.3s / var(--i));
+    animation: none;
+}
+
+.about.show-animate .animate.scroll,
+.education.show-animate .animate.scroll,
+.education.show-animate .education-box .animate.scroll,
+.skills.show-animate .animate.scroll,
+.contact.show-animate .animate.scroll,
+.footer.show-animate .animate.scroll {
+    transition-delay: calc(.3s * var(--i));
+    width: 0;
+}
+
+.education .education-box .animate.scroll{
+    width: 105%;
 }
 
 @media (max-width: 1200px) {
@@ -706,5 +807,104 @@ span{
     .navbar.active .active-nav{
         transition-delay: .25s;
         left: 0;
+    }
+
+    .education-row{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width:520px) {
+    html{
+        font-size: 50%;
+    }
+
+    .home-content h1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home-sci {
+        width: 160px;
+    }
+
+    .home-sci a{
+        width: 38px;
+        height: 38px;
+    }
+}
+
+@media (max-width:462px) {
+    .home-content h1{
+        font-size: 5.2rem;
+    }
+
+    .education{
+        padding: 10rem 4% 5rem 5%;
+    }
+
+    .contact form .input-box .input-field{
+        width: 100%;
+    }
+
+    .footer{
+        flex-direction: column-reverse;
+    }
+
+    .footer p{
+        margin-top: 2rem;
+        text-align: center;
+    }
+}
+
+@media (max-width:371px) {
+    .home{
+        justify-content: center;
+    }
+
+    .home-content{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+}
+
+@keyframes homeBgText {
+    0%,10%,100%{
+        background-position: -33rem 0;
+    }
+    65%,85%{
+        background-position: 0 0;
+    }
+}
+
+@keyframes homeCursorText {
+    0%,10%,100%{
+       width: 0%;
+    }
+    65%,78%,85%{
+        width: 100%;
+        opacity: 1;
+    }
+    75%,81%{
+        opacity: 0;
+    }
+}
+
+@keyframes aboutSpinner{
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes showRight{
+    100%{
+        width: 0;
     }
 }
