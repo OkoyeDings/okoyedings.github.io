@@ -733,6 +733,7 @@ footer{
         justify-content:start;
         text-align: center;
         align-items: center;
+        width: 100%;
     }
 
     header{
@@ -776,7 +777,7 @@ footer{
 @media (max-width:550px) {
 
     section.home .home-content {
-        height: 50vh;
+        height: 40vh;
     }
 
     .footer-top-logo img{
