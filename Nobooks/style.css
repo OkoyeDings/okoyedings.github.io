@@ -143,7 +143,7 @@ section.home .home-content p{
 }
 
 .feature{
-    margin-top: 20rem;
+    margin-top: 25rem;
 }
 
 .benfits{
@@ -380,6 +380,28 @@ input{
 
 .school-information-form p{
     padding: 10px;
+}
+
+.message{
+    background: lightblue;
+    color: #0B0E4A;
+    width: 90%;
+    max-width: 500px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0  auto;
+    display: none;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    top: 365%;
+}
+
+.message.show{
+    display: block;
+    transition: all .5s ease-in-out;
+    animation: drop 1s linear forwards;
 }
 
 .school-information-form form{
@@ -733,6 +755,7 @@ footer{
         justify-content:start;
         text-align: center;
         align-items: center;
+        width: 100%;
     }
 
     header{
@@ -776,7 +799,7 @@ footer{
 @media (max-width:550px) {
 
     section.home .home-content {
-        height: 50vh;
+        height: 40vh;
     }
 
     .footer-top-logo img{
@@ -790,5 +813,14 @@ footer{
 
     .home-img{
         margin-top: 7rem;
+    }
+}
+
+@keyframes drop {
+    0%{
+       transform: translateY(-300vh);
+    }
+    100%{
+        transform: translateY(0);
     }
 }

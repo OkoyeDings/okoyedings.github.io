@@ -68,3 +68,22 @@ leftArrow.addEventListener('click', function(){
     showPerson(currentItem)
 })
 
+var message= document.querySelector(".message");
+
+var form = document.getElementById('sheetdb-form');
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  fetch(form.action, {
+      method : "POST",
+      body: new FormData(document.getElementById("sheetdb-form")),
+  }).then(
+      response => response.json()
+  ).then((html) => {
+    // in case i want to redirect to a new page
+    // window.open('page2.html', '_blank');
+    message.classList.add('show');
+    setTimeout(()=>{
+       message.classList.remove('show')
+      },6000);
+  });
+});
