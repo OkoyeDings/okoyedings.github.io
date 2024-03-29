@@ -69,21 +69,37 @@ leftArrow.addEventListener('click', function(){
 })
 
 var message= document.querySelector(".message");
+var error = document.querySelector(".error");
 
-var form = document.getElementById('sheetdb-form');
-form.addEventListener("submit", e => {
-  e.preventDefault();
-  fetch(form.action, {
-      method : "POST",
-      body: new FormData(document.getElementById("sheetdb-form")),
-  }).then(
-      response => response.json()
-  ).then((html) => {
-    // in case i want to redirect to a new page
-    // window.open('page2.html', '_blank');
+function dropDownMessage (){
     message.classList.add('show');
+    form.reset()
     setTimeout(()=>{
-       message.classList.remove('show')
-      },6000);
-  });
-});
+        message.classList.remove('show')
+    },6000);
+}
+
+function errorMessage (){
+    error.classList.add('show');
+    form.reset()
+    setTimeout(()=>{
+        error.classList.remove('show')
+    },6000);
+}
+ 
+const scriptURL = 'https://script.google.com/macros/s/AKfycbztvkd51VE6cjE8XCv2zEmicrpV0Tbejnx0INglwX2ggHBuDeud-HnMY3eQWI3JbfZWNA/exec'
+
+const form = document.querySelector("#sheetdb-form");
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault()
+    try{
+        const res = await fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        const data = await res.json()
+        if (data.result !== "success")  return errorMessage() // email already exist or something went wrong in appscript
+        return dropDownMessage() // everything worked fine
+    }
+    catch(e){
+        console.error(e) // something really went wrong
+    }
+})
