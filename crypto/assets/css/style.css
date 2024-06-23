@@ -278,11 +278,16 @@ body.active { overflow: hidden; }
   font-weight: var(--fw-700);
   padding: 4px 8px;
   border-radius: 50px;
+  display: flex;
+
+  span{
+    margin-right: 5px;
+  }
 }
 
-.badge.red { background-color: var(--presian-red); }
+.badge.red { background-color: var(--roman-silver); }
 
-.badge.green { background-color: var(--medium-sea-green); }
+.badge.green { background-color: var(--roman-silver); }
 
 .last-update.red { color: var(--presian-red); }
 
@@ -428,18 +433,36 @@ body.active { overflow: hidden; }
   border: solid 1px var(--cadet-blue-crayola);
   text-align: center;
 
-  h3{
-      font-size: 3rem;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      text-transform: uppercase;
-      color: var(--main-color);
+  .user-name{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+    .u-name{
+      width: 80%;
+      display: flex;
+      justify-content: start;
+      align-items: start;
+    }
+
+    img{
+      height: 20%;
+      width: 20%;
+    }
+
+    span{
+      padding-left:10px ;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
   }
 
   .box{
       width: 100%;
       margin: .8rem 0;
       background:var(--white_10);
-      border-radius: .5rem;
+      border-radius: 1rem;
       padding: 1rem;
       font-size: 1.6rem;
       color: var(--white);
@@ -449,16 +472,34 @@ body.active { overflow: hidden; }
   }
 
   p{
-      font-size: 1.4rem;
-      padding: .5rem 0;
-      color: var(--white_50);
+      font-size: 1rem;
+      padding: .8rem 0;
+      color: var(--white_10);
       display: flex;
       justify-content: center;
+      text-decoration: none;
+      height: 5rem;
+      border-bottom: solid 1px var(--white_30);
+      display: flex;
+      align-items: center;
+     
 
       a{
-        color: var(--blue-crayola);
-        text-decoration: underline;
+        color: var(--white);
+        text-decoration: none;
         padding-left: 3px;
+        font-size: 2rem;
+        transition: all .4s ease;
+        &:hover{
+          color: var(--white_50);
+          letter-spacing: 1px;
+          transition: all .2s ease ;
+        }
+      }
+
+      i{
+        color: white;
+        padding-right: 20px;
       }
   }
 }
@@ -481,6 +522,20 @@ body.active { overflow: hidden; }
 .hero-text {
   font-size: var(--fs-5);
   margin-block: 25px 40px;
+
+  strong{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-style: italic;
+  }
+
+  a{
+    color: var(--blue-crayola);
+
+    &:hover{
+      color: var(--white_50);
+    }
+  }
 }
 
 
@@ -566,6 +621,7 @@ body.active { overflow: hidden; }
   font-size: var(--fs-3);
   font-weight: var(--fw-700);
   margin-block: 10px;
+  display: flex;
 }
 
 .trend-card .card-analytics {
