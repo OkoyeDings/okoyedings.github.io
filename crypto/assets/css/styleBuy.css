@@ -1,0 +1,19 @@
+.about .container {
+    display: flex;
+    align-items: center;
+}
+
+.about-content{
+    width: 100%;
+    text-align: center;
+}
+
+.title-wrapper{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.specials{
+    padding-left: 20px;
+}

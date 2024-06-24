@@ -365,7 +365,7 @@ body.active { overflow: hidden; }
 
 .logo {
   color: var(--white);
-  font-size: 2.5rem;
+  font-size: 1.7rem;
   font-weight: var(--fw-700);
   display: flex;
   align-items: center;
@@ -868,6 +868,14 @@ body.active { overflow: hidden; }
   border-radius: 50px;
 }
 
+.invest-now{
+  background-color: transparent;
+  &:hover{
+    color: var(--blue-crayola);
+    border-color: var(--blue-crayola);
+  }
+}
+
 
 
 
@@ -994,6 +1002,15 @@ address.footer-contact-link { max-width: 30ch; }
 
   .hero-text { --fs-5: 2rem; }
 
+  .logo {
+    color: var(--white);
+    font-size: 1.7rem;
+    font-weight: var(--fw-700);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 }
 
 
@@ -1107,6 +1124,8 @@ address.footer-contact-link { max-width: 30ch; }
   }
 
   .copyright { margin-block-end: 0; }
+
+
 
 }
 
