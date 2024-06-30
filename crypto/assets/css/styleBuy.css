@@ -17,3 +17,10 @@
 .specials{
     padding-left: 20px;
 }
+
+.deals{
+    padding: 15px   ;
+    background-color: var(--eerie-black-1);
+}
+
+

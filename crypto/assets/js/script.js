@@ -1,10 +1,6 @@
-'use strict';
 let loginForm  = document.querySelector('.login-form');
 document.querySelector('#user-btn').onclick = () =>{
-    loginForm.classList.toggle('active');
-    searchFrom.classList.remove('active');
-    shoppingCart.classList.remove('active');
-    bar.classList.remove('active');
+  loginForm.classList.toggle('active');
 }
 
 window.onscroll = () =>{
