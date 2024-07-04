@@ -164,11 +164,15 @@ img {
 
 .card__pricing-number {
   font-size: var(--h2-font-size);
+  position: relative;
+  top: -1rem;
 }
 
 .card__pricing-month {
   display: block;
   font-size: 1rem;
+  position: relative;
+  top: -1rem;
 }
 
 .card__pricing-number, 
