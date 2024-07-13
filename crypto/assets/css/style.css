@@ -112,6 +112,8 @@
   padding: 0;
   box-sizing: border-box;
   transition: all.2s ease;
+  text-transform: capitalize;
+  scroll-behavior: smooth;
 }
 
 li { list-style: none; }
@@ -148,6 +150,7 @@ html {
   font-family: var(--ff-dm-sans);
   scroll-behavior: smooth;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -529,13 +532,27 @@ body.active { overflow: hidden; }
     font-style: italic;
   }
 
-  a{
-    color: var(--blue-crayola);
+ 
+}
 
-    &:hover{
-      color: var(--white_50);
-    }
+#read{
+  color: var(--blue-crayola);
+
+  &:hover{
+    color: var(--white_50);
   }
+}
+
+.read{
+  height: 0;
+  overflow: hidden;
+  transition: all .5s ease-in-out;
+  font-size: var(--fs-5);
+}
+
+.read.active{
+  height: 25rem;
+  transition: all 1s ease-in-out;
 }
 
 

@@ -97,12 +97,30 @@ const scrollReveal = function () {
     }
   }
 }
-
 scrollReveal();
 
 addEventOnElem(window, "scroll", scrollReveal);
 
 
+
+/**read more drop down */
+const read = document.querySelector(".read");
+const readClick = document.querySelector("#read");
+
+readClick.onclick = () => {
+  read.classList.toggle("active")
+}
+
+
+
+
+
+
+
+
+
+
+/**Displaying crypto price */
 var bitcoin = document.getElementById("bit");
 var Ethereum = document.getElementById("Ethereum");
 var Tether = document.getElementById("Tether");
