@@ -263,3 +263,84 @@ $.ajax(liveprice).done(function (response){
 
   }
 });
+
+//greeting text
+const hello = document.querySelector(".hello");
+const close = document.querySelector("#close");
+
+close.addEventListener("click", function(){
+ hello.classList.add("go")
+})
+
+//spounsor
+let swiperCard = new Swiper('.sponsors', {
+  loop: true,
+  spaceBetween: 50,
+  grabCursor:true,
+  center:true,
+  autoplay:true,
+  speed: 500,
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable:true,
+    dynamicBullets:true,
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+
+  breakpoints:{
+      0:{
+          slidesPerView:2,
+      },
+      500:{
+          slidesPerView:3,
+      },
+      800:{
+          slidesPerView:4,
+      },
+      1000:{
+          slidesPerView:5,
+      }
+  }
+
+});
+
+let swiperCardss = new Swiper('.box-container', {
+  loop: true,
+  spaceBetween: 0,
+  grabCursor:true,
+  center:true,
+  autoplay:true,
+
+
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable:true,
+    dynamicBullets:true,
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  breakpoints:{
+      0:{
+          slidesPerView:1,
+          nav:true
+      },
+      550:{
+          slidesPerView:1,
+      },
+      1000:{
+          slidesPerView:1,
+      }
+  }
+
+});

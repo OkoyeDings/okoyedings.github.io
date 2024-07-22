@@ -435,6 +435,7 @@ body.active { overflow: hidden; }
   background: var(--color-background);
   border: solid 1px var(--cadet-blue-crayola);
   text-align: center;
+  
 
   .user-name{
     display: flex;
@@ -479,7 +480,7 @@ body.active { overflow: hidden; }
       padding: .8rem 0;
       color: var(--white_10);
       display: flex;
-      justify-content: center;
+      justify-content: space-around;
       text-decoration: none;
       height: 5rem;
       border-bottom: solid 1px var(--white_30);
@@ -557,6 +558,98 @@ body.active { overflow: hidden; }
 
 
 
+/* REVIEW */
+
+#review{
+  height: 70vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: screen;
+  position: relative;
+  background: var(--black_10);
+}
+
+#review .heading{
+  color: var(--blue-crayola);
+  text-align: center;
+  font-size: 3rem;
+  padding-top: 7rem;
+  margin: 2rem 0;
+  position: relative;
+}
+
+
+#review .heading::after{
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: .3rem;
+  width: 60%;
+  background: var(--bg-color);
+}
+
+.box-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
+.review-slider .box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.review-slider  .image{
+  margin-top: 10rem;
+  margin-left: 3rem;
+}
+
+.review-slider img{
+  height:10rem;
+  width: 10rem;
+  border-radius: 50% 50% 50% 0%;
+  border: .5rem solid var(--white);
+}
+
+.comment{
+  height: 25rem;
+  width: 45rem;
+  background-color: var(--blue-crayola_10);
+  border-radius: 2% 2% 0% 40%;
+  padding-top: 2rem;
+}
+
+.comment p{
+  color: var(--text-color);
+  font-size: 1.6rem;
+  padding: 2rem;
+}
+
+.comment p i{
+  color: var(--white);
+  font-size: 2rem;
+  padding: 0rem .5rem; 
+}
+
+.comment h3{
+  text-align: end;
+  color: var(--blue-crayola);
+  margin: .5rem 2rem;
+  font-size: 2.5rem;
+}
 
 
 /*-----------------------------------*\
@@ -794,8 +887,35 @@ body.active { overflow: hidden; }
   border-color: var(--blue-crayola);
 }
 
+/*-----------------------------------*\
+  #SPONSORS
+\*-----------------------------------*/
+.sponsor{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  background-color: var(--black_10);
+  max-width:100%;
+}
 
 
+.sponsors{
+  display: flex;
+  width: auto;
+  padding: .5em 0;
+  max-width: 100%;
+}
+
+[data-section].active > * {
+  opacity: 1;
+  transform: translateY(0);
+  max-width: 100%;
+}
 
 
 /*-----------------------------------*\
@@ -970,9 +1090,52 @@ address.footer-contact-link { max-width: 30ch; }
 
 .social-link:is(:hover, :focus) { color: var(--blue-crayola); }
 
+.hello{
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background-color: var(--cadet-blue-crayola);
+  color: var(--blue-crayola_10);
+  border-radius: 20px 20px 0px 20px;
+  bottom: 70px;
+  right: 60px;
+  z-index: 100000;
+  animation: flow 2s ease 1;
+}
 
+@keyframes flow{
+  0%{
+      opacity: 0;
+      transform: translateX(100%);
+  }
 
+  100%{
+      opacity: 1;
+      transform: translateX(0);
+  }
 
+}
+
+.closeG{
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  color: black;
+  cursor: pointer;
+}
+
+#close:hover{
+  color: red;
+}
+
+.greeting{
+  color: black;
+}
+
+.hello.go{
+  display: none;
+}
 
 /*-----------------------------------*\
   #MEDIA QUERIES
@@ -1142,8 +1305,57 @@ address.footer-contact-link { max-width: 30ch; }
 
   .copyright { margin-block-end: 0; }
 
+  
 
+}
 
+@media (max-width:760px) {
+  .hello{
+    right:5px;
+  }
+
+  .greeting h3{
+    font-size: 15px;
+  }
+
+  .greeting p{
+    font-size: 12px;
+  }
+
+  .fa-xmark{
+    font-size: 15px;
+  }
+
+  
+  #review .heading{
+    padding-top: 3rem;
+    margin-bottom: 5rem;
+  }
+  .review-slider{
+   
+  }
+  .review-slider .box{
+    position: relative;
+    height: 50vh;
+  }
+  .review-slider  .image{
+    position: absolute;
+    top: 0;
+    margin: 0;
+  }
+  .review-slider  img{
+    border-radius: 5rem;
+  }
+  .comment{
+    border-radius: 1rem;
+    text-align: center;
+    width: 35rem;
+  }
+  .comment h3{
+    text-align: center;
+    margin-top: -2rem;
+  } 
+    
 }
 
 
@@ -1256,6 +1468,7 @@ address.footer-contact-link { max-width: 30ch; }
 
   .app-content { margin-block: 50px; }
 
+  
 }
 
 
@@ -1362,3 +1575,6 @@ address.footer-contact-link { max-width: 30ch; }
   .footer-brand { grid-column: auto; }
 
 }
+
+
+
