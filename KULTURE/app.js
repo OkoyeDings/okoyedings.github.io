@@ -42,13 +42,15 @@ let swiperCards = new Swiper('.products-slider', {
         0:{
             slidesPerView:1,
         },
-        768:{
+        700:{
             slidesPerView:2,
         },
         1024:{
             slidesPerView:3,
         },
-
+        1224:{
+            slidesPerView:4,
+        },
     }
   
 });
