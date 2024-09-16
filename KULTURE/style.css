@@ -31,13 +31,18 @@ html{
 }
 
 body{
-    background: Silver ;
+    background: rgb(225, 223, 231) ;
     transition: all .3s ease-in-out;
 }
 
 section{
     padding: 2rem 9%;
 }
+
+
+
+
+/* header */
 
 .heading{
     text-align: center;
@@ -109,12 +114,15 @@ section{
 
 .header .icons{
     display: flex;
+    justify-content: space-around;
+    width: 200px;
 }
 
 .header .icons div{
-    height: 4.5rem;
-    width: 4.5rem;
-    line-height: 4.5rem;
+    height: auto;
+    width: auto;
+    line-height: auto;
+    padding: 10px;
     border-radius: .5rem;
     background: var(--bg-color);
     color: var(--main-color);
@@ -181,6 +189,50 @@ section{
     transition: .4s linear;
 }
 
+.state{
+    position: absolute;
+    width: 100%;
+    top: 100%; right: 0; left: 0;
+    background-color: var(--bg-color);
+    color: var(--text1-color);
+    height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+
+    .content{
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-around;
+
+        a{
+            color: var(--text1-color);
+            text-decoration: none;
+            font-size: 15px;
+            padding: 10px;
+
+            &:hover{
+                color: var(--second-bg-color);
+            }
+        }
+    }
+}
+.state.active{
+    height: auto;
+    padding: 10px;
+    margin: 0;
+}
+
+
+
+
+
+
+
+/* home content */
+
 
 .home{
     display: flex;
@@ -216,6 +268,12 @@ span{
     line-height: 1.8rem;
 }
 
+.swiper-wrapper{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 .products h1{
     color: var(--bg-color);
@@ -232,7 +290,7 @@ span{
 }
 
 .products .products-slider{
-    padding: 1rem;
+    
 }
 
 .products-slider:first-child{
@@ -251,7 +309,9 @@ span{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    justify-content: baseline;
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
 }
 
 .products-slider .box.box2{
@@ -541,6 +601,464 @@ span{
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.products-slider .box.box43{
+    background: url(https://fapdungeon.com/wp-content/uploads/2023/04/@unlockedmegaA-TELEGRAM-14-769x1019.png), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box44{
+    background: url(https://fapdungeon.com/wp-content/uploads/2023/04/ElitePacks.net-Join-Telegram-@ElitePacksOfficial-1688-769x1025.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box45{
+    background: url(https://fapdungeon.com/wp-content/uploads/2023/04/960x1280_fc92a3a88decb25b8c5be72d86e6ff0f-769x1025.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box46{
+    background: url(https://fapdungeon.com/wp-content/uploads/2023/10/3405x4543_1c753fc5ba17e292d5962062e8e8f472-769x1026.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box47{
+    background: url(https://fapdungeon.com/wp-content/uploads/2023/10/Sashiuwu-@onlyfansisfree-on-tg-106-769x848.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box48{
+    background: url(https://fapdungeon.com/wp-content/uploads/2023/05/IMG-20230223-WA0001-769x1026.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box49{
+    background: url(https://fapdungeon.com/wp-content/uploads/2023/11/@unlockedmegaA-TELEGRAM-3-769x1415.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box50{
+    background: url(https://fapdungeon.com/wp-content/uploads/2024/04/2189x2918_7f3c6196e6854e1b98de187cf15139f2-769x1025.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box51{
+    background: url(https://fapdungeon.com/wp-content/uploads/2024/03/1134x2108_225f34786e571b6a6335b6ccd731cefc-MPqYCuJt-769x1429.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box52{
+    background: url(https://fapdungeon.com/wp-content/uploads/2024/05/IMG_0929-WrCD7OTb-IymF5iHR-769x1025.jpeg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box53{
+    background: url(https://fapdungeon.com/wp-content/uploads/2024/05/@RisqueMega-94-769x1027.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box54{
+    background: url(https://fapdungeon.com/wp-content/uploads/2024/01/venomous_dolly-@onlyfansisfree-on-tg-1237-769x1110.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box55{
+    background: url(https://fapdungeon.com/wp-content/uploads/2024/04/Join-@MegaRedLinkz-on-Telegram-33-769x1154.jpeg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box56{
+    background: url(https://fapdungeon.com/wp-content/uploads/2024/02/Hey-sup-%F0%9F%98%8C-769x1025.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box57{
+    background: url(https://fapdungeon.com/wp-content/uploads/2024/05/Join-@MegaRedLinkz-On-Telegram-93-769x1203.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box58{
+    background: url(https://fapdungeon.com/wp-content/uploads/2024/07/Join-@MegaRedLinkz-On-Telegram-46-769x900.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box59{
+    background: url(https://fapdungeon.com/wp-content/uploads/2024/06/@Prmpacks-Telegram-691-769x1025.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box60{
+    background: url(https://fapdungeon.com/wp-content/uploads/2024/07/ElitePacks.net-Join-Telegram-@ElitePacksOfficial-116-1-769x577.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box61{
+    background: url(https://fapdungeon.com/wp-content/uploads/2024/07/ElitePacks.net-Join-Telegram-@ElitePacksOfficial-109-769x1154.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box62{
+    background: url(https://fapdungeon.com/wp-content/uploads/2024/09/ElitePacks.net-Join-Telegram-@ElitePacksOfficial-263-769x653.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box63{
+    background: url(https://fapdungeon.com/wp-content/uploads/2024/08/ElitePacks.net-Join-Telegram-@ElitePacksOfficial-370-769x1025.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box64{
+    background: url(https://fapdungeon.com/wp-content/uploads/2024/08/@RisqueMega-43-769x1025.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box65{
+    background: url(https://fapdungeon.com/wp-content/uploads/2024/09/Join-@MegaRedLinkz-on-Telegram-189-769x1024.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box66{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/04/15.2059700074-769x1116.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box67{
+    background: url(https://fapdungeon.com/wp-content/uploads/2022/12/f4681e4081093b2a99c87caca3f1319d.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box68{
+    background: url(https://fapdungeon.com/wp-content/uploads/2023/01/Uploaded-by-ElitePacks.net-Join-TG-@ElitePacksOfficial-13-2-769x961.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box69{
+    background: url(https://fapdungeon.com/wp-content/uploads/2022/11/Megaonlyfans-Reddit-Community-175-769x769.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box70{
+    background: url(https://fapdungeon.com/wp-content/uploads/2022/08/Join-@MegaRedLinks2-on-Reddit-186-769x1026.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box71{
+    background: url(https://fapdungeon.com/wp-content/uploads/2022/09/LeakedBB.com_Repost_477--769x769.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box72{
+    background: url(https://fapdungeon.com/wp-content/uploads/2022/11/FgV4nzaUUAAjiwg-769x1025.jpeg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box73{
+    background: url(https://fapdungeon.com/wp-content/uploads/2022/10/3D665C7C-8805-441B-B396-49BE1F1686F8_1-769x1664.png), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box74{
+    background: url(https://fapdungeon.com/wp-content/uploads/2022/06/Telegram-@MegaFree4All024-769x1025.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box74{
+    background: url(https://fapdungeon.com/wp-content/uploads/2022/06/Telegram-@MegaFree4All024-769x1025.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box75{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/10/15876963-E22AB326-5B0D-4637-A22D-D84000DDE41C-769x1367.jpeg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box76{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/10/2019-12-14_19-47-59_UTC-769x891.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box77{
+    background: url(https://fapdungeon.com/wp-content/uploads/2023/02/image-045-join-our-TG-@DirtySantaLeaks-769x1025.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box78{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/04/93.1477300815-769x769.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box79{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/04/73.296208069-769x961.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box80{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/04/1301903265-769x794.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box81{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/04/186-CHANfxq-769x824.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box82{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/04/34.712366388-769x961.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box83{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/04/64-Jd91z2j-769x1367.jpg
+    ), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box84{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/04/15.771109097-769x827.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box85{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/04/1.2009694210-769x961.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box86{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/04/3pvgazua0pg31.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box87{
+    background: url(https://fapdungeon.com/wp-content/uploads/2021/01/2020-09-08-02.08.07-769x832.jpeg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box88{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/12/2019-12-09_07-37-57_UTC-769x961.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box89{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/12/2020-09-23_09-25-11_UTC-769x961.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box90{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/12/2020-04-27_12-30-35_UTC-769x828.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box87{
+    background: url(https://fapdungeon.com/wp-content/uploads/2021/01/2020-09-08-02.08.07-769x832.jpeg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box88{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/12/2019-12-09_07-37-57_UTC-769x961.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box89{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/12/2020-09-23_09-25-11_UTC-769x961.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box90{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/12/2020-04-27_12-30-35_UTC-769x828.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box91{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/11/2020-11-02_11-57-30_UTC-769x769.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box92{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/11/2020-07-07_04-30-49_UTC-769x961.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box93{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/10/2020-09-13_14-43-49_UTC_1.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box94{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/11/2020-05-14_14-50-42_UTC_4-769x769.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box95{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/10/2020-08-04_01-16-22_UTC-769x961.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box96{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/09/2020-08-06_18-33-08_UTC_1.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box97{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/09/2019-04-13_13-51-19_UTC-769x769.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box98{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/09/aympiv-Busty_in_grey.-aePv2As-769x961.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box99{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/09/2020-04-19_09-51-52_UTC-769x961.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box100{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/08/2020-07-27_11-06-54_UTC-769x961.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box101{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/07/2020-05-11_05-47-44_UTC-769x885.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products-slider .box.box102{
+    background: url(https://fapdungeon.com/wp-content/uploads/2020/07/2020-07-09_11-52-42_UTC-769x961.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
 
 .products-slider .box:hover{
     outline-offset: 0rem;

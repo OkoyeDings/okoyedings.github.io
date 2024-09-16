@@ -15,7 +15,13 @@ window.onscroll = () =>{
     bar.classList.remove('active');
 }
 
-let swiperCards = new Swiper('.products-slider', {
+let state  = document.querySelector('.state');
+    document.querySelector('#location').onclick = () =>{
+    state.classList.toggle('active');
+}
+
+
+let swiperCards = new Swiper('.products-slide', {
     loop: true,
     spaceBetween: 20,
     grabCursor:true,
@@ -55,39 +61,28 @@ let swiperCards = new Swiper('.products-slider', {
   
 });
 
-let swiperCard = new Swiper('.review-slider', {
-    loop: true,
-    spaceBetween: 20,
-    grabCursor:true,
-    center:true,
-    autoplay:{
-        delay:1500,
-        disableOnInteraction:false,
-    },
-    speed: 500,
+(function(){
+    const buttons= document.querySelectorAll('.place')
+    const storeImage =document.querySelectorAll('.store-item')
 
-    pagination: {
-      el: '.swiper-pagination',
-      clickable:true,
-      dynamicBullets:true,
-    },
-
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+    buttons.forEach((button) => {
+        button.addEventListener('click',(e)=> {
+            e.preventDefault()
+            const filter = e.target.dataset.filter
+            state.classList.remove('active');
 
 
-    breakpoints:{
-        0:{
-            slidesPerView:1,
-        },
-        768:{
-            slidesPerView:2,
-        },
-        1024:{
-            slidesPerView:3,
-        },
-    }
-  
-});
+            storeImage.forEach((item) => {
+                if (filter==='all'){
+                    item.style.display = 'block'
+                }else{
+                    if(item.classList.contains(filter)) {
+                        item.style.display = 'block'
+                    }else{
+                        item.style.display = 'none'
+                    }
+                }
+            })
+        })
+    })
+})();
